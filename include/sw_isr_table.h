@@ -37,6 +37,9 @@ typedef struct _IsrTableEntry _IsrTableEntry_t;
 extern _IsrTableEntry_t _sw_isr_table[CONFIG_NUM_IRQS - 16];
 #elif CONFIG_NIOS2
 extern _IsrTableEntry_t _sw_isr_table[NIOS2_NIRQ];
+#elif CONFIG_XTENSA
+#include <xtensa/config/core.h>
+extern _IsrTableEntry_t _sw_isr_table[XCHAL_NUM_INTERRUPTS];
 #else
 extern _IsrTableEntry_t _sw_isr_table[CONFIG_NUM_IRQS];
 #endif

@@ -16,7 +16,7 @@
 #if !defined(_Restrict_defined)
 #define _Restrict_defined
 
-#ifdef __cplusplus
+#if defined(__cplusplus) || defined(__xtensa__)
 	#define _Restrict __restrict__
 #else
 	#define _Restrict restrict
